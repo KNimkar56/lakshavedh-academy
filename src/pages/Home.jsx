@@ -11,75 +11,65 @@ function Home() {
 
   return (
     <div>
-
       {/* HERO SECTION */}
       <section
-  className="hero-section d-flex align-items-center position-relative text-white"
-  style={{
-    backgroundImage: 'url(https://images.unsplash.com/photo-1552611052-33b48f4b5183)',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '100vh',
-    overflow: 'hidden',
-  }}
-  data-aos="fade-up"
->
-  <div
-    className="position-absolute top-0 start-0 w-100 h-100"
-    style={{
-      background: 'linear-gradient(to bottom right, rgba(0, 43, 91, 0.85), rgba(255, 193, 7, 0.2))',
-      zIndex: 1,
-    }}
-  ></div>
-
-  <div className="container position-relative z-2 text-center">
-    <div className="row justify-content-center">
-      <div className="col-lg-10 col-md-12 px-4 px-md-5">
-        <h1 className="display-2 fw-bold mb-4" style={{ lineHeight: 1.2 }}>
-          Empower Bright Minds, One Lesson at a Time ✨
-        </h1>
-        <p className="lead fs-4 mb-5 text-light">
-          Welcome to <span style={{ color: '#FFD700' }} className="fw-semibold">Lakshavedh Academy</span> —
-          Personalized guidance in <strong>Math, Science & English</strong> for confident learners and top results.
-        </p>
-        <Link
-          to="/courses"
-          className="btn"
-          style={{
-            backgroundColor: '#002B5B',
-            color: '#FFD700',
-            padding: '0.9rem 2.8rem',
-            fontWeight: 'bold',
-            fontSize: '1.1rem',
-            borderRadius: '8px',
-            boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-            transition: 'all 0.3s ease',
-            border: 'none'
-          }}
-          onMouseEnter={e => {
-            e.currentTarget.style.transform = 'scale(1.05)';
-            e.currentTarget.style.backgroundColor = '#FFC107';
-            e.currentTarget.style.color = '#002B5B';
-          }}
-          onMouseLeave={e => {
-            e.currentTarget.style.transform = 'scale(1)';
-            e.currentTarget.style.backgroundColor = '#002B5B';
-            e.currentTarget.style.color = '#FFD700';
-          }}
-        >
-          📚 Explore Courses
-        </Link>
-      </div>
-    </div>
-  </div>
-</section>
+        className="hero-section d-flex align-items-center position-relative text-white"
+        style={{
+          backgroundImage: 'linear-gradient(to bottom right, rgba(0, 43, 91, 0.85), rgba(255, 193, 7, 0.2)), url(https://images.unsplash.com/photo-1552611052-33b48f4b5183)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          height: '100vh',
+          overflow: 'hidden',
+        }}
+        data-aos="fade-up"
+      >
+        <div className="container position-relative text-center" style={{ zIndex: 2 }}>
+          <div className="row justify-content-center">
+            <div className="col-lg-10 col-md-12 px-4 px-md-5">
+              <h1 className="display-2 fw-bold mb-4" style={{ lineHeight: 1.2 }}>
+                Empower Bright Minds, One Lesson at a Time ✨
+              </h1>
+              <p className="lead fs-4 mb-5 text-light">
+                Welcome to <span style={{ color: '#FFD700' }} className="fw-semibold">Lakshavedh Academy</span> —
+                Personalized guidance in <strong>Math, Science & English</strong> for confident learners and top results.
+              </p>
+              <Link
+                to="/courses"
+                className="btn"
+                style={{
+                  backgroundColor: '#002B5B',
+                  color: '#FFD700',
+                  padding: '0.9rem 2.8rem',
+                  fontWeight: 'bold',
+                  fontSize: '1.1rem',
+                  borderRadius: '8px',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                  transition: 'all 0.3s ease',
+                  border: 'none',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'scale(1.05)';
+                  e.currentTarget.style.backgroundColor = '#FFC107';
+                  e.currentTarget.style.color = '#002B5B';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.backgroundColor = '#002B5B';
+                  e.currentTarget.style.color = '#FFD700';
+                }}
+              >
+                📚 Explore Courses
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* COURSES SECTION */}
       <section className="py-5" style={{ backgroundColor: '#EDECCF' }} data-aos="fade-up">
         <div className="container">
           <h2 className="text-center mb-4 fw-bold">📚 Our Courses</h2>
           <div className="row g-4">
-
             {/* MATH */}
             <div className="col-md-4">
               <div className="card h-100 shadow-sm">
@@ -136,7 +126,6 @@ function Home() {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -166,7 +155,6 @@ function Home() {
       <section className="py-5" style={{ backgroundColor: '#EDECCF' }} data-aos="fade-up">
         <div className="container text-center">
           <h2 className="fw-bold mb-5">💬 Student & Parent Testimonials</h2>
-
           <div id="testimonialCarousel" className="carousel slide carousel-dark" data-bs-ride="carousel" data-bs-interval="6000">
             <div className="carousel-indicators">
               {[0, 1, 2].map((i) => (
@@ -180,12 +168,11 @@ function Home() {
                 ></button>
               ))}
             </div>
-
             <div className="carousel-inner">
               {[
                 { text: "My child’s confidence in math has improved a lot. Great teaching style!", author: "Mrs. Sharma, Parent" },
                 { text: "The science animations made learning so interesting!", author: "Ankit, Class 9" },
-                { text: "Thanks to the grammar course, my writing scores went up by 30%.", author: "Priya, Class 8" }
+                { text: "Thanks to the grammar course, my writing scores went up by 30%.", author: "Priya, Class 8" },
               ].map((testimonial, i) => (
                 <div className={`carousel-item ${i === 0 ? "active" : ""}`} key={i}>
                   <blockquote className="blockquote p-4 bg-white border-start border-4" style={{ borderColor: '#FAF5AF', maxWidth: '700px', margin: 'auto' }}>
@@ -216,7 +203,6 @@ function Home() {
           <Link to="/courses" className="btn btn-light btn-lg mt-3">Browse Courses</Link>
         </div>
       </section>
-
     </div>
   );
 }
